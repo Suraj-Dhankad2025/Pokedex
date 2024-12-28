@@ -55,7 +55,10 @@ export default function Home() {
   }, [page]);
   
 
-  const favoritePokemon = JSON.parse(localStorage.getItem("favorites") || "[]");
+  let favoritePokemon = [];
+  if (typeof window !== "undefined") {
+    favoritePokemon = JSON.parse(localStorage.getItem("favorites") || "[]");
+  }
   const favPokemon = pokemon.filter((p) => favoritePokemon.includes(p.id));
  
   const filteredPokemon = pokemon.filter((p) => {
