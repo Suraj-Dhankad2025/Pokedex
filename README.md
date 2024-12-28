@@ -21,27 +21,14 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
-🚀 Features
-	1.	Dynamic Pagination:
-	•	Efficiently loads and displays Pokémon data across multiple pages without overwhelming the API or client browser.
-	2.	Favorites Management:
-	•	Allows users to mark and unmark Pokémon as favorites, saved directly to local storage for persistence across sessions.
-	3.	Filtering:
-	•	Users can filter Pokemon based on their favorite status or Type of Pokemon.
+## 🚀 Features
+	1.Dynamic Pagination:
+		•Efficiently loads and displays Pokémon data across multiple pages without overwhelming the API or client browser.
+	2.Favorites Management:
+		•Allows users to mark and unmark Pokémon as favorites, saved directly to local storage for persistence across sessions.
+	3.Filtering:
+		•Users can filter Pokemon based on their favorite status or Type of Pokemon.
 
-## Challenges and Solutions
-Pagination Handling:
-	•	Challenge: Managing dynamic data loading without degrading performance or user experience.
-	•	Solution: Implemented server-side data fetching with getServerSideProps in Next.js to load paginated data efficiently and maintain scalability.
-Local Storage Favorites:
-	•	Challenge: Managing favorites in local storage while maintaining React’s state synchronization.
-	•	Solution:
-	•	Utilized the useState and useEffect hooks to synchronize local storage with React state.
-Filtering with Pagination:
-	•	Challenge: Ensuring the filtering feature didn’t conflict with the pagination system.
-	•	Solution:
-	      Applied client-side filtering on the already fetched paginated data using React state.
-	      Maintained a seamless user experience by re-rendering the filtered list dynamically.
        
 ## Future Enhancements
   •	Add advanced filtering options (e.g., by type, ability, or region).
