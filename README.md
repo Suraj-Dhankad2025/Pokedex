@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+A web application to explore Pokemon, built using Next.js, ShadCN, and PokeAPI. The app includes features like pagination, the ability to add Pokémon to a favorites list stored in local storage, and filtering capabilities.
 
 ## Getting Started
-
-First, run the development server:
-
+Prerequisites
+	•	Node.js (v16 or later)
+	•	npm or yarn
+ 
+First, clone the Repository and open it locally 
+ ```bash
+git clone https://github.com/Suraj-Dhankad2025/Pokedex.git
+cd Pokedex
+```
+Install all dependencies
+```bash
+npm install
+```
+Run the development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Features
+	1.	Dynamic Pagination:
+	•	Efficiently loads and displays Pokémon data across multiple pages without overwhelming the API or client browser.
+	2.	Favorites Management:
+	•	Allows users to mark and unmark Pokémon as favorites, saved directly to local storage for persistence across sessions.
+	3.	Filtering:
+	•	Users can filter Pokemon based on their favorite status or Type of Pokemon.
 
-## Learn More
+## Challenges and Solutions
+Pagination Handling:
+	•	Challenge: Managing dynamic data loading without degrading performance or user experience.
+	•	Solution: Implemented server-side data fetching with getServerSideProps in Next.js to load paginated data efficiently and maintain scalability.
+Local Storage Favorites:
+	•	Challenge: Managing favorites in local storage while maintaining React’s state synchronization.
+	•	Solution:
+	•	Utilized the useState and useEffect hooks to synchronize local storage with React state.
+Filtering with Pagination:
+	•	Challenge: Ensuring the filtering feature didn’t conflict with the pagination system.
+	•	Solution:
+	      Applied client-side filtering on the already fetched paginated data using React state.
+	      Maintained a seamless user experience by re-rendering the filtered list dynamically.
+       
+## Future Enhancements
+  •	Add advanced filtering options (e.g., by type, ability, or region).
+	•	Implement a search bar for quick Pokemon lookup.
+	• Adding Authentication(OAuth or JWT Auth)
+	•	Enable dark mode for better accessibility.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
 ## Deploy on Vercel
-
+Deployed Link - https://pokedex-eta-six-55.vercel.app/
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
