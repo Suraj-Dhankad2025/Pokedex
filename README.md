@@ -22,15 +22,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 ## 🚀 Features
-1.Dynamic Pagination: Efficiently loads and displays Pokémon data across multiple pages without overwhelming the API or client browser.
-2.Favorites Management: Allows users to mark and unmark Pokémon as favorites, saved directly to local storage for persistence across sessions.
-3.Filtering: Users can filter Pokemon based on their favorite status or Type of Pokemon.
+1.Dynamic Pagination: Efficiently loads and displays Pokémon data across multiple pages without overwhelming the API or client browser.<br>
+2.Favorites Management: Allows users to mark and unmark Pokémon as favorites, saved directly to local storage for persistence across sessions.<br>
+3.Filtering: Users can filter Pokemon based on their favorite status or Type of Pokemon.<br>
        
 ## Future Enhancements
-  Add advanced filtering options (e.g., by type, ability, or region).
-  Implement a search bar for quick Pokemon lookup.
-  Adding Authentication(OAuth or JWT Auth)
-  Enable dark mode for better accessibility.
+  Add advanced filtering options (e.g., by type, ability, or region).<br>
+  Implement a search bar for quick Pokemon lookup.<br>
+  Adding Authentication(OAuth or JWT Auth).<br>
+  Enable dark mode for better accessibility.<br>
 
 Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
 
