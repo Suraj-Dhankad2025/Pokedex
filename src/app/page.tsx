@@ -52,12 +52,10 @@ export default function Home() {
   useEffect(() => {
     loadPokemon();
     loadTypes();
-  }, []);
+  }, [page]);
   
 
-  const favoritePokemon = typeof window !== "undefined" 
-    ? JSON.parse(localStorage.getItem("favorites") || "[]") 
-    : [];
+  const favoritePokemon = JSON.parse(localStorage.getItem("favorites") || "[]");
   const favPokemon = pokemon.filter((p) => favoritePokemon.includes(p.id));
  
   const filteredPokemon = pokemon.filter((p) => {
